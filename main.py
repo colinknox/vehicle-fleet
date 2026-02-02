@@ -26,8 +26,20 @@ class Motorcycle(Vehicle):
     def get_sidecar_info(self):
         return f"Has sidecar: {self.has_sidecar}"
 
+class Truck(Vehicle):
+    def __init__(self, make, model, year, bed_length):
+        super().__init__(make, model, year)
+        self.bed_length = bed_length
+
+    def get_bed_info(self):
+        return f"Bed length: {self.bed_length} feet"
 
 
-brough = Motorcycle("Brough", "Superior", 1932, False)
 
-print(brough.get_sidecar_info())
+f150 = Truck("Ford", "F150", 2025, 6)
+
+print(f150.make)
+print(f150.model)
+print(f150.year)
+print(f150.bed_length)
+print(f150.get_bed_info())
