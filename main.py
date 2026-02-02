@@ -23,11 +23,11 @@ class Motorcycle(Vehicle):
         super().__init__(make, model, year)
         self.has_sidecar = has_sidecar
 
+    def get_sidecar_info(self):
+        return f"Has sidecar: {self.has_sidecar}"
+
 
 
 brough = Motorcycle("Brough", "Superior", 1932, False)
 
-print(brough.make)
-print(brough.model)
-print(brough.year)
-print(brough.has_sidecar)
+print(brough.get_sidecar_info())
